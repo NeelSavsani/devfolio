@@ -20,6 +20,7 @@
 }
 
 .projects h2 {
+    font-family: "Poppins", sans-serif;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 10px;
@@ -92,7 +93,11 @@
     padding: 4px 10px;
     font-size: 0.8rem;
     margin-right: 6px;
-    border-radius: 6px;
+    border-radius: 100px;
+}
+
+a {
+    text-decoration: none;
 }
 
 .view-all {
@@ -132,11 +137,12 @@
     }
 }
 
-.light-mode .projects .subheading, .light-mode .projects .project-card .project-content p {
+.light-mode .projects .subheading,
+.light-mode .projects .project-card .project-content p {
     color: var(--text-light);
 }
 
-.light-mode .project-image{
+.light-mode .project-image {
     background: var(--actived);
 }
 
@@ -145,7 +151,7 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.light-mode .view-all .secondary:hover{
+.light-mode .view-all .secondary:hover {
     color: var(--text-dark);
     border: 1px solid var(--hover-bg);
 }

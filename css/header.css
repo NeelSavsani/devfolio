@@ -64,6 +64,11 @@ header {
     margin: 10px 130px;
 }
 
+a.logo {
+    text-decoration: none;
+    color: inherit;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -90,14 +95,17 @@ nav a {
     text-decoration: none;
     color: inherit;
     font-size: 0.95rem;
+    padding: 10px 15px;
     transition: color 0.3s;
 }
 
 nav a.active {
+    background: var(--hover-bg);
     color: var(--active);
 }
 
 nav a:hover {
+    background: var(--hover-bg);
     color: var(--active);
 }
 
@@ -227,9 +235,5 @@ main {
     nav a,
     .icons a {
         border-radius: 8px;
-    }
-
-    nav a:hover {
-        background-color: transparent;
     }
 }
