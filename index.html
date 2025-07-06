@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeelSavsani - DevFolio</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/what.css">
+    <link rel="stylesheet" href="css/myprojects.css">
+    <link rel="stylesheet" href="css/work.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/MasterEagle.png" alt="Logo">
+                DevFolio
+            </div>
+
+            <button class="menu-toggle" onclick="toggleMenu()" id="menuToggle">☰</button>
+
+            <nav>
+                <a href="#" class="active">Home</a>
+                <a href="#">Projects</a>
+                <a href="#">About</a>
+                <div class="icons">
+                    <a href="#" onclick="toggleTheme(event)" title="Toggle Theme"><i class="fas fa-sun"></i></a>
+                    <a href="https://github.com/NeelSavsani" target="_blank" title="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/neel-savsani" target="_blank" title="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:neelsavsani7@google.com" title="Mail"><i class="fas fa-envelope"></i></a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="group1">
+                <a href="#" class="active">Home</a>
+                <a href="#">Projects</a>
+                <a href="#">About</a>
+            </div>
+            <div class="group2">
+                <a href="#" onclick="toggleTheme()" title="Toggle Theme"><i class="fas fa-sun"></i></a>
+                <a href="https://github.com/NeelSavsani" target="_blank" title="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/neel-savsani" target="_blank" title="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:neelsavsani7@google.com" title="Mail"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ======================HERO================= -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="badge">🔥 Available for new opportunities</span>
+                    <h1>
+                        <span class="intro">Hi, I'm</span><br />
+                        <span class="name">Neel Savsani</span><br />
+                        <span class="title">Full-Stack Web Developer</span>
+                    </h1>
+                    <p>
+                        I create exceptional digital experiences with modern technologies.<br />
+                        Passionate about clean code, user experience, and building scalable solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="primary">View My Work <i class="fas fa-arrow-right"></i></button>
+                        <button class="secondary">Get In Touch</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/NeelSavsani.png" alt="Profile" />
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =================WHAT I DO=============== -->
+        <section class="what-i-do">
+            <h2>What I Do</h2>
+            <p class="subheading">I specialize in building full-stack applications with a focus on
+                performance,<br>scalability, and user experience.</p>
+            <div class="skills">
+                <div class="card">
+                    <div class="icon"><i class="fas fa-code"></i></div>
+                    <h3>Frontend Development</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-database"></i></div>
+                    <h3>Backend Development</h3>
+                    <p>Python, PHP</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-globe"></i></div>
+                    <h3>Web Technologies</h3>
+                    <p>REST APIs, GraphQL, WebSockets</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Mobile Development</h3>
+                    <p>Flutter</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======PROJECTS============== -->
+        <section class="projects">
+            <h2>Featured Projects</h2>
+            <p class="subheading">
+                Here are some of my recent projects that showcase my skills and passion for development.
+            </p>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/captcha.png" alt="Captcha Generator" />
+                    </div>
+                    <div class="project-content">
+                        <h3>Captcha Generator</h3>
+                        <p>A lightweight CAPTCHA generation tool implemented with HTML, CSS, and Vanilla JavaScript to
+                            enhance form security without external dependencies.</p>
+                        <div class="tags">
+                            <span>HTML</span><span>CSS</span><span>Vanilla JS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/rsystem.png" alt="Task Management" />
+                    </div>
+                    <div class="project-content">
+                        <h3>MasterSign - Registration System</h3>
+                        <p>A user registration system built with HTML, CSS, and vanilla JavaScript, using PHP and MySQL
+                            for backend data storage and processing.</p>
+                        <div class="tags">
+                            <span>HTML</span><span>CSS</span><span>Vanilla JS</span><span>PHP</span><span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <button class="secondary">View All Projects <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <!-- ===========LET'S WORK TOGETHER============== -->
+        <section class="work">
+            <h2>Let's Work Together</h2>
+            <p class="subheading">
+                I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your
+                ideas to life.
+            </p>
+            <div class="start-convo">
+                <button class="primary">Start a conversation <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
