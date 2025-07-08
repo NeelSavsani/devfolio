@@ -62,9 +62,20 @@
     cursor: pointer;
 }
 
-.project-card:hover {
+.project-card:hover, .other-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.light-mode .project-card:hover,
+.light-mode .other-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .project-card:hover .project-image{
+    background: var(--active);
+    opacity: 1;
 }
 
 .project-image {
@@ -166,11 +177,6 @@
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-}
-
-.other-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .other-icon {

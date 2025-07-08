@@ -51,9 +51,19 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skills .card:hover {
+.light-mode .skills .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.skills .card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(255, 0255, 0255, 0.2);
+}
+
+.light-mode .skills .card .icon {
+    background-color: var(--actived);
+    color: var(--ico-color);
 }
 
 .skills .card .icon {
