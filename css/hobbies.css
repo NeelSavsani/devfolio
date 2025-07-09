@@ -1,0 +1,69 @@
+:root {
+    --bg-dark: #07080A;
+    --bg-light: #ffffff;
+    --text-dark: #ffffff;
+    --text-light: #000000;
+    --active: #16A34A;
+    --actived: #159946;
+    --card-bg: #08090c;
+}
+
+.hobbies-section {
+    max-width: 1200px;
+    margin: 100px auto 0 auto;
+    text-align: center;
+}
+
+.hobbies-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.hobby-card {
+    background-color: var(--card-bg);
+    box-shadow: 0 0 0 1px #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 0 1px var(--active);
+}
+
+.hobby-card i {
+    font-size: 2rem;
+    color: var(--active);
+    margin-bottom: 1rem;
+}
+
+.hobby-card h3 {
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.hobby-card p {
+    font-size: 0.95rem;
+    font-family: "Roboto", sans-serif;
+    color: var(--text-dark);
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Responsive fallback */
+@media (max-width: 600px) {
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+}

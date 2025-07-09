@@ -26,12 +26,12 @@
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    transition: transform 0.2s;
+    transition: all 0.2s;
 }
 
 .education-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 2px var(--active);
+    box-shadow: 0 0 0 1px var(--active);
 }
 
 .education-header {
@@ -44,6 +44,7 @@
 .education-header h3 {
     font-size: 1.2rem;
     font-weight: 700;
+    font-family: "Poppins", sans-serif;
     color: var(--text-dark);
     margin-bottom: 0.5rem;
 }
@@ -57,9 +58,10 @@
     font-weight: bold;
 }
 
-.company {
+.degree {
     color: var(--active);
-    font-weight: 500;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
     margin-bottom: 0.5rem;
 }
 
