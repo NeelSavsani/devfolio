@@ -32,8 +32,6 @@ h2 {
     font-weight: 700;
 }
 
-
-
 .avatar {
     width: 100px;
     font-family: monospace;
@@ -71,10 +69,6 @@ h2 {
     color: #a1a1aa;
 }
 
-.light-mode .info {
-    color: #4b5563;
-}
-
 .info i {
     margin-right: 0.5rem;
     color: var(--active);
@@ -83,7 +77,6 @@ h2 {
 .buttons {
     display: flex;
     justify-content: flex-start;
-    /* or center in base */
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
@@ -97,7 +90,6 @@ button.primary {
     padding: 0.6rem 1.2rem;
     display: flex;
     justify-content: flex-start;
-    /* or center in base */
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
@@ -119,7 +111,6 @@ button.primary:hover {
     background-color: var(--actived);
 }
 
-
 .buttons .secondary {
     padding: 10px 15px;
     background-color: transparent;
@@ -136,7 +127,6 @@ button.primary:hover {
     border: 1px solid var(--hover-bg);
 }
 
-
 .buttons a {
     text-decoration: none;
 }
@@ -148,9 +138,8 @@ button.primary:hover {
     width: 80%;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 0 0 1px #333;
+    border: 1px solid var(--shadow-light);
 }
-
 
 .form-row {
     display: flex;
@@ -184,7 +173,6 @@ textarea {
     transition: border 0.3s;
 }
 
-
 input:focus,
 textarea:focus {
     border-color: var(--active);
@@ -217,7 +205,11 @@ button.btn {
 .light-mode .contact-form {
     background-color: var(--bg-light);
     color: var(--text-light);
-    box-shadow: 0 0 0 1px #ccc;
+    border: 1px solid #ccc;
+}
+
+.light-mode .info {
+    color: #4b5563;
 }
 
 /* ========== RESPONSIVE FIX ========== */

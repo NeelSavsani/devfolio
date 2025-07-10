@@ -10,6 +10,8 @@
     --actived: #159946;
     --hover-bg: #222;
     --group2-hover-bg: #222;
+    --shadow-light: rgba(255, 0255, 0255, 0.2);
+    --shadow-dark: rgba(0, 0, 0, 0.2);
 }
 
 .projects {
@@ -41,20 +43,21 @@
 
 .project-card {
     background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--shadow-light);
     border-radius: 12px;
     overflow: hidden;
     flex: 1 1 calc(50% - 20px);
     min-width: 280px;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.2s;
+    cursor: default;
 }
 
-
 .project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    border: 1px solid var(--active);
+    box-shadow: 0 8px 24px var(--active);
 }
 
 .project-card:hover .project-image {
@@ -130,17 +133,6 @@ a {
     margin-left: 8px;
 }
 
-@media (max-width: 768px) {
-    .project-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-card {
-        width: 100%;
-    }
-}
-
 .light-mode .projects .subheading,
 .light-mode .projects .project-card .project-content p {
     color: var(--text-light);
@@ -152,7 +144,7 @@ a {
 
 .light-mode .project-card {
     background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--text-light);
 }
 
 .light-mode .view-all .secondary:hover {
@@ -162,10 +154,21 @@ a {
 
 .light-mode .project-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px var(--shadow-dark);
 }
 
 .light-mode .project-card:hover .project-image {
     background: var(--active);
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+    }
 }

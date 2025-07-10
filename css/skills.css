@@ -6,6 +6,8 @@
     --active: #16A34A;
     --actived: #159946;
     --card-bg: #08090c;
+    --shadow-light: rgba(255, 255, 255, 0.2);
+    --shadow-dark: rgba(0, 0, 0, 0.2);
 }
 
 .skills-section {
@@ -20,7 +22,6 @@
     color: var(--text-dark);
 }
 
-
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -33,15 +34,15 @@
     background-color: var(--card-bg);
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 0 0 1px #333;
+    border: 1px solid #333;
     text-align: left;
-    transition: transform 0.2s;
+    transition: all 0.2s;
 }
-
 
 .skill-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 2px var(--active);
+    border: 1px solid var(--active);
+    box-shadow: 0 8px 24px var(--active);
 }
 
 .skill-box h3 {
@@ -65,14 +66,18 @@
     color: var(--text-light);
 }
 
-
 .light-mode .skill-box {
     background-color: var(--bg-light);
     color: var(--text-light);
-    box-shadow: 0 0 0 1px #ccc;
+    border: 1px solid var(--text-light);
 }
-
 
 .light-mode h2 {
     color: var(--text-light);
+}
+
+.light-mode .skill-box:hover {
+    box-shadow: 0 8px 24px var(--shadow-dark);
+    transform: translateY(-5px);
+    border: 1px solid #000;
 }

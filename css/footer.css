@@ -22,7 +22,7 @@
   color: var(--text-dark);
 }
 
-.light-mode .fa-heart:hover {
+.fa-heart:hover {
   color: red;
   cursor: pointer;
 }

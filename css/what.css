@@ -11,6 +11,8 @@
     --hover-bg: #222;
     --group2-hover-bg: #222;
     --ico-color: #105259;
+    --shadow-light: rgba(255, 255, 255, 0.2);
+    --shadow-dark: rgba(0, 0, 0, 0.2);
 }
 
 .what-i-do {
@@ -43,27 +45,19 @@
 
 .skills .card {
     background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--text-dark);
+    border: 1px solid var(--shadow-light);
     border-radius: 12px;
     padding: 30px 20px;
     width: 260px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.2s;
+    cursor: default;
 }
 
-.light-mode .skills .card:hover {
+.skills .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
-
-.skills .card:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 8px 24px rgba(255, 0255, 0255, 0.2);
-}
-
-.light-mode .skills .card .icon {
-    background-color: var(--actived);
-    color: var(--ico-color);
+    box-shadow: 0 8px 24px var(--active);
+    border: 1px solid var(--active);
 }
 
 .skills .card .icon {
@@ -77,7 +71,6 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto 12px;
-    transition: all 0.1s ease;
 }
 
 .skills .card:hover .icon {
@@ -96,11 +89,14 @@
     color: #c0c0c0;
 }
 
-@media (max-width: 768px) {
-    .skills {
-        flex-direction: column;
-        align-items: center;
-    }
+.light-mode .skills .card .icon {
+    background-color: var(--actived);
+    color: var(--ico-color);
+}
+
+.light-mode .skills .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px var(--shadow-dark);
 }
 
 .light-mode main .what-i-do .subheading,
@@ -109,5 +105,12 @@
 }
 
 .light-mode main .what-i-do .skills .card {
-    border: 0.5px solid #ccc;
+    border: 1px solid #000;
+}
+
+@media (max-width: 768px) {
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
 }

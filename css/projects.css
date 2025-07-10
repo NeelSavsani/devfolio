@@ -10,9 +10,13 @@
     --actived: #159946;
     --hover-bg: #222;
     --group2-hover-bg: #222;
+    --shadow-light: rgba(255, 255, 255, 0.2);
+    --shadow-dark: rgba(0, 0, 0, 0.2);
 }
 
-.my-pro, .fe-pro, .ot-pro {
+.my-pro,
+.fe-pro,
+.ot-pro {
     padding: 60px 20px;
     max-width: 1600px;
     margin: 0 auto;
@@ -33,11 +37,13 @@
     margin-bottom: 40px;
 }
 
-.fe-pro, .ot-pro {
+.fe-pro,
+.ot-pro {
     margin-top: 10px;
 }
 
-.fe-pro h2, .ot-pro h2 {
+.fe-pro h2,
+.ot-pro h2 {
     text-align: left;
 }
 
@@ -51,31 +57,22 @@
 
 .project-card {
     background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--shadow-light);
     border-radius: 12px;
     overflow: hidden;
     flex: 1 1 calc(50% - 20px);
     min-width: 280px;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.2s;
     cursor: pointer;
 }
 
-.project-card:hover, .other-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
-}
-
-.light-mode .project-card:hover,
-.light-mode .other-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.light-mode .project-card:hover .project-image{
-    background: var(--active);
-    opacity: 1;
+.project-card:hover,
+.other-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--active);
+    border: 1px solid var(--active);
 }
 
 .project-image {
@@ -132,7 +129,7 @@
 .secondary {
     text-decoration: none;
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--shadow-light);
     border-radius: 8px;
     font-size: 1.2rem;
     width: fit-content;
@@ -168,7 +165,7 @@
 
 .other-card {
     background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--shadow-light);
     border-radius: 12px;
     padding: 20px;
     display: flex;
@@ -244,7 +241,7 @@
 
 .other-secondary {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--shadow-light);
     color: var(--text-dark);
 }
 
@@ -260,6 +257,44 @@
 
 .other-primary:hover {
     background-color: var(--actived);
+}
+
+.light-mode .subheading,
+.light-mode p,
+.light-mode a {
+    color: var(--text-light);
+}
+
+.light-mode .project-image {
+    background: var(--actived);
+}
+
+.light-mode .project-card,
+.light-mode .other-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--text-light);
+}
+
+.light-mode .secondary,
+.light-mode .other-secondary {
+    color: var(--text-light);
+    border: 1px solid var(--hover-bg);
+}
+
+.light-mode .secondary:hover,
+.light-mode .other-secondary:hover {
+    color: var(--text-dark);
+}
+
+.light-mode .project-card:hover,
+.light-mode .other-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-dark);
+}
+
+.light-mode .project-card:hover .project-image {
+    background: var(--active);
+    opacity: 1;
 }
 
 @media (max-width: 1024px) {
@@ -333,26 +368,4 @@
         margin-bottom: 6px;
         font-size: 0.75rem;
     }
-}
-
-.light-mode .subheading, .light-mode p, .light-mode a{
-    color: var(--text-light);
-}
-
-.light-mode .project-image{
-    background: var(--actived);
-}
-
-.light-mode .project-card, .light-mode .other-card{
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.light-mode .secondary, .light-mode .other-secondary {
-    color: var(--text-light);
-    border: 1px solid var(--hover-bg);
-}
-
-.light-mode .secondary:hover, .light-mode .other-secondary:hover {
-    color: var(--text-dark);
 }
